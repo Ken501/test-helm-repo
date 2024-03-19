@@ -1,0 +1,30 @@
+apiVersion: v2
+name: cert-manager-issuers
+description: A Helm chart for cert-manager cluster issuers k8s objects that provide custom crd definitions for cert-manager Helm release.
+
+type: application
+
+version: 1.0.0
+
+appVersion: "1.13.3"
+
+# kubeVersion: "1.28"
+
+keywords:
+  - cert-manager
+  - cert-manager-issuers
+  - issuer
+  - clusterissuer
+  - dns
+  - certificate
+  - tls
+  - wildcart
+
+sources:
+  - https://github.com/r2ronoha/karpenter-nodepools/tree/main/charts/karpenter-nodepools
+maintainers:
+  - name: kube-express
+    email: no-reply@jamf.com
+    url: jamf.com
+
+deprecated: false

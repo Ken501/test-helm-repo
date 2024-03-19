@@ -1,0 +1,20 @@
+# Chart Name
+nameOverride: cert-manager-issuers
+
+# Configure clusterIssuers
+clusterIssuer:
+  letsencrypt:
+    name: letsencrypt-staging
+    acme:
+      email: no-reply@jamf.com
+      server: https://acme-staging-v02.api.letsencrypt.org/directory
+      privateKeySecretRefName: letsencrypt-staging
+    solvers:
+      - dns01:
+          route53:
+            region: ${awsRegion}
+  privateCa:
+    chaos:
+      name: jamf-chaos-io
+      ca:
+        secretName: jamf-chaos-io-secret

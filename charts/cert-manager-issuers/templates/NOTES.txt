@@ -1,0 +1,9 @@
+Congratulations! You have successfully installed cert-manager cluster issuer components from jamf repository. k8s objects included in this release:
+
+- ClusterIssuer
+
+
+helm repo: https://github.com/r2ronoha/karpenter-nodepools/tree/main/charts/karpenter-nodepools
+gh repo: https://github.com/r2ronoha/karpenter-nodepools/tree/main/charts/karpenter-nodepools
+
+These are post-requisites for main cert-manager installation. Happy Helming!
