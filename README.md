@@ -241,27 +241,27 @@ helm dependency update charts/getting-started/
 
 ```
 
-## Dir Structure
+## Directory Structure
 
 ```text
 .
 ├── README.md
 └── charts
-    ├── cert-manager-issuers
+    ├── cert-manager-certificates
     │   ├── Chart.yaml
     │   ├── README.md
     │   ├── templates
     │   │   ├── NOTES.txt
     │   │   ├── _helpers.tpl
-    │   │   └── cluster-issuers.yaml
+    │   │   └── chaos-certificate.yaml
     │   └── values.yaml
-    └── karpenter-nodepools
+    └── cert-manager-issuers
         ├── Chart.yaml
         ├── README.md
         ├── templates
+        │   ├── NOTES.txt
         │   ├── _helpers.tpl
-        │   ├── ec2nodeclass.yaml
-        │   └── nodepool.yaml
+        │   └── cluster-issuers.yaml
         └── values.yaml
 
 6 directories, 13 files
