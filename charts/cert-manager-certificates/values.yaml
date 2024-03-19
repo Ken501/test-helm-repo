@@ -1,0 +1,28 @@
+# Chart Name
+nameOverride: cert-manager-issuers
+
+# Configure certificate/s
+certificates:
+  chaos:
+    metadata:
+      name: wildcard-jamf-chaos-io-cert
+    spec:
+      secretName: wildcard-jamf-chaos-io-tls
+      duration: 2160h
+      renewBefore: 360h
+      subject:
+        organizations:
+          - jamf
+      commonName: " "
+      dnsNames:
+        - " "
+      issuerRef:
+        name: jamf-chaos-io
+        kind: ClusterIssuer
+        group: cert-manager.io
+      secretTemplate:
+      annotations:
+        reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: ""
+        reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: ""

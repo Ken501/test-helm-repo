@@ -1,0 +1,9 @@
+Congratulations! You have successfully installed cert-manager cluster certificate components from jamf repository. k8s objects included in this release:
+
+- certificate
+
+
+helm repo: placeholder
+gh repo: placeholder
+
+These are post-requisites for main cert-manager installation. Happy Helming!

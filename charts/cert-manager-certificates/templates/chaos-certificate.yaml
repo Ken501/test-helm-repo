@@ -1,0 +1,28 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.certificates.chaos.metadata.name }}
+spec:
+  secretName: {{ .Values.certificates.chaos.spec.secretName }}
+  duration: {{ .Values.certificates.chaos.spec.duration }}
+  renewBefore: {{ .Values.certificates.chaos.spec.renewBefore }}
+  subject:
+    organizations:
+    {{- with .Values.certificates.chaos.spec.subject.organizations }}
+    {{- toYaml . | nindent 6 }}
+    {{- end }}
+  commonName: {{ .Values.certificates.chaos.spec.commonName }}
+  dnsNames:
+  {{- with .Values.certificates.chaos.spec.dnsNames }}
+  {{- toYaml . | nindent 4 }}
+  {{- end }}
+  issuerRef:
+    name: {{ .Values.certificates.chaos.spec.issuerRef.name }}
+    kind: {{ .Values.certificates.chaos.spec.issuerRef.kind }}
+    group: {{ .Values.certificates.chaos.spec.issuerRef.group }}
+  secretTemplate:
+    annotations:
+      {{- with .Values.certificates.chaos.spec.annotations }}
+      {{- toYaml . | nindent 6 }}
+      {{- end }}

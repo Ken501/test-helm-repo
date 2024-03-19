@@ -3,7 +3,7 @@ Congratulations! You have successfully installed cert-manager cluster issuer com
 - ClusterIssuer
 
 
-helm repo: https://github.com/r2ronoha/karpenter-nodepools/tree/main/charts/karpenter-nodepools
-gh repo: https://github.com/r2ronoha/karpenter-nodepools/tree/main/charts/karpenter-nodepools
+helm repo: placeholder
+gh repo: placeholder
 
 These are post-requisites for main cert-manager installation. Happy Helming!
