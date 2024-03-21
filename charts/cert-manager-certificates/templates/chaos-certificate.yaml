@@ -23,6 +23,6 @@ spec:
     group: {{ .Values.certificates.chaos.spec.issuerRef.group }}
   secretTemplate:
     annotations:
-      {{- with .Values.certificates.chaos.spec.annotations }}
+      {{- with .Values.certificates.chaos.spec.secretTemplate.annotations }}
       {{- toYaml . | nindent 6 }}
       {{- end }}
